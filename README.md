@@ -105,16 +105,7 @@ Ce projet est sous licence MIT. Voir le fichier LICENCE pour plus de détails.
 Pour toute question, contactez-moi :
 
 GitHub : @Dev-Djelloul
-Email : [ton.email@example.com] (à personnaliser)
+Email : [digitalblueskye@gmail.com]
 ✨ Projet réalisé avec passion pour la Ferme des Amandiers !
 
 ---
-
-### **Prochaines étapes** :
-1. **Je peux créer ce fichier `README.md`** directement dans ton futur dépôt `fermedesAmandiers`.
-2. **Veux-tu que je crée aussi le dépôt GitHub `fermedesAmandiers` maintenant ?** (Je peux le faire en 1 commande !)
-3. **As-tu besoin d’ajuster quelque chose dans le README ?** (Ex: ajouter des détails techniques, des captures d’écran, etc.)
-
-Dis-moi comment tu veux procéder ! 😊
-
-*(PS : Si tu veux, je peux aussi ajouter un fichier `.gitignore` pour exclure les fichiers sensibles comme les configurations de base de données.)*
