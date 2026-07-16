@@ -63,9 +63,9 @@ fermedesAmandiers/
    git clone https://github.com/Dev-Djelloul/fermedesAmandiers.git
    cd fermedesAmandiers
 
-
+.
+   
    Importer la base de données :
-
 Créer une base de données MySQL (ex: ferme_des_amandiers).
 Importer le fichier db/fermeDesAmandiers.sql via phpMyAdmin ou en ligne de commande :
 mysql -u [utilisateur] -p ferme_des_amandiers < db/fermeDesAmandiers.sql
