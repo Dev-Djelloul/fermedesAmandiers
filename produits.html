@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Produits de saison à la Ferme des Amandiers">
+    <title>Produits - Ferme des Amandiers</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="site-title">
+                <h1>Ferme des Amandiers</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="produits-intro">
+            <div class="container">
+                <h1>Nos paniers disponibles</h1>
+                <p>Retrouvez ici les fruits et légumes de saison disponibles à la vente.</p>
+            </div>
+        </section>
+
+        <section id="produits-filtre">
+            <div class="container">
+                <div class="filtre-buttons">
+                    <button class="btn-filtre active" data-filtre="tous" aria-pressed="true">Tous</button>
+                    <button class="btn-filtre" data-filtre="mercredi" aria-pressed="false">Mercredi</button>
+                    <button class="btn-filtre" data-filtre="samedi" aria-pressed="false">Samedi</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="produits-liste">
+            <div class="container">
+                <div class="produits-grid" id="products-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h4>Ferme des Amandiers</h4>
+                <p>Chemin de la Plaine, 13220 Châteauneuf-les-Martigues</p>
+                <p>Téléphone : 06 12 34 56 78</p>
+                <p>Email : sandrine@fermedesamandiers.fr</p>
+                <p>SIRET : 123 456 789 00012</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-legal-links">
+                <ul>
+                    <li><a href="#mentions-legales">Mentions légales</a></li>
+                    <li><a href="#politique-confidentialite">Politique de confidentialité</a></li>
+                    <li><a href="#cgv">Conditions générales de vente</a></li>
+                    <li><a href="#cookies">Gestion des cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2026 Ferme des Amandiers - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const grid = document.getElementById('products-grid');
+            const filterButtons = document.querySelectorAll('.btn-filtre');
+            let products = [];
+
+            function renderProducts(filterValue = 'tous') {
+                if (!grid) return;
+
+                grid.innerHTML = '';
+
+                const filteredProducts = products.filter((product) => {
+                    if (filterValue === 'tous') return true;
+                    return product.availability.includes(filterValue);
+                });
+
+                filteredProducts.forEach((product) => {
+                    const availabilityText = product.availability.join(' et ');
+                    const card = document.createElement('article');
+                    card.className = 'produit-card';
+                    card.setAttribute('data-jour', product.availability.join(' '));
+                    card.innerHTML = `
+                        <div class="produit-image">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="produit-content">
+                            <h2 class="produit-titre">${product.name}</h2>
+                            <div class="produit-meta">
+                                <span class="produit-saison"><strong>Saison :</strong> ${product.season}</span>
+                                <span class="produit-jours"><strong>Disponibilité :</strong> ${availabilityText}</span>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+
+            fetch('data/products.json')
+                .then((response) => {
+                    if (!response.ok) throw new Error('Impossible de charger les produits');
+                    return response.json();
+                })
+                .then((data) => {
+                    products = data.products || [];
+                    renderProducts();
+                })
+                .catch((error) => {
+                    grid.innerHTML = '<p>Les produits sont actuellement indisponibles.</p>';
+                    console.error(error);
+                });
+
+            filterButtons.forEach((button) => {
+                button.addEventListener('click', function () {
+                    const filterValue = this.getAttribute('data-filtre');
+
+                    filterButtons.forEach((btn) => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-pressed', 'false');
+                    });
+
+                    this.classList.add('active');
+                    this.setAttribute('aria-pressed', 'true');
+
+                    renderProducts(filterValue);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

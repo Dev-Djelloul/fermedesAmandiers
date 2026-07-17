@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "name": "Tomates anciennes",
+      "image": "assets/img/produits/tomates_anciennes.jpg",
+      "season": "Été",
+      "availability": ["mercredi", "samedi"]
+    },
+    {
+      "name": "Carottes nouvelles",
+      "image": "assets/img/produits/carottes_nouvelles.jpg",
+      "season": "Printemps",
+      "availability": ["mercredi"]
+    },
+    {
+      "name": "Salades variées",
+      "image": "assets/img/produits/salades_variees.jpg",
+      "season": "Printemps",
+      "availability": ["samedi"]
+    },
+    {
+      "name": "Courgettes",
+      "image": "assets/img/produits/courgettes.jpg",
+      "season": "Été",
+      "availability": ["samedi"]
+    },
+    {
+      "name": "Aubergines",
+      "image": "assets/img/produits/aubergines.jpg",
+      "season": "Été",
+      "availability": ["mercredi"]
+    },
+    {
+      "name": "Pommes de terre",
+      "image": "assets/img/produits/pommes_de_terre.jpg",
+      "season": "Printemps",
+      "availability": ["mercredi", "samedi"]
+    },
+    {
+      "name": "Oignons",
+      "image": "assets/img/produits/oignons.jpg",
+      "season": "Printemps",
+      "availability": ["samedi"]
+    },
+    {
+      "name": "Épinards",
+      "image": "assets/img/produits/epinards.jpg",
+      "season": "Printemps",
+      "availability": ["mercredi"]
+    },
+    {
+      "name": "Poireaux",
+      "image": "assets/img/produits/poireaux.jpg",
+      "season": "Automne",
+      "availability": ["mercredi", "samedi"]
+    },
+    {
+      "name": "Basilic",
+      "image": "assets/img/produits/basilic.jpg",
+      "season": "Été",
+      "availability": ["samedi"]
+    },
+    {
+      "name": "Persil",
+      "image": "assets/img/produits/persil.jpg",
+      "season": "Printemps",
+      "availability": ["mercredi"]
+    },
+    {
+      "name": "Radis",
+      "image": "assets/img/produits/radis.jpg",
+      "season": "Printemps",
+      "availability": ["mercredi", "samedi"]
+    }
+  ]
+}

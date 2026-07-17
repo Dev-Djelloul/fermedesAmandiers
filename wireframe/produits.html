@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Ferme des Amandiers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-gray-800">Ferme des Amandiers</div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-600 hover:text-black">Accueil</a>
+                    <a href="produits.html" class="text-gray-600 hover:text-black">Produits</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page titre -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">Nos paniers disponibles</h1>
+            <p class="mt-2 text-gray-600">Retrouvez ici les fruits et légumes de saison disponibles à la vente</p>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="py-6">
+        <div class="max-w-7xl mx-auto px-4 flex justify-center gap-4">
+            <button data-filtre="tous" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Tous</button>
+            <button data-filtre="mercredi" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Mercredi</button>
+            <button data-filtre="samedi" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Samedi</button>
+        </div>
+    </section>
+
+    <!-- Liste des produits -->
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg shadow p-4" data-jour="mercredi samedi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Tomates anciennes</h3>
+                <p class="text-sm text-gray-600">Disponibles mercredi et samedi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="mercredi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Carottes nouvelles</h3>
+                <p class="text-sm text-gray-600">Disponibles mercredi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="samedi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Salades variées</h3>
+                <p class="text-sm text-gray-600">Disponibles samedi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="samedi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Courgettes</h3>
+                <p class="text-sm text-gray-600">Disponibles samedi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="mercredi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Aubergines</h3>
+                <p class="text-sm text-gray-600">Disponibles mercredi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="mercredi samedi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Pommes de terre</h3>
+                <p class="text-sm text-gray-600">Disponibles mercredi et samedi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="samedi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Oignons</h3>
+                <p class="text-sm text-gray-600">Disponibles samedi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="mercredi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Épinards</h3>
+                <p class="text-sm text-gray-600">Disponibles mercredi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="mercredi samedi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Poireaux</h3>
+                <p class="text-sm text-gray-600">Disponibles mercredi et samedi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="samedi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Basilic</h3>
+                <p class="text-sm text-gray-600">Disponibles samedi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="mercredi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Persil</h3>
+                <p class="text-sm text-gray-600">Disponibles mercredi</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4" data-jour="mercredi samedi">
+                <div class="bg-gray-200 h-40 w-full rounded mb-4 flex items-center justify-center text-gray-600">Image produit</div>
+                <h3 class="font-semibold text-gray-800">Radis</h3>
+                <p class="text-sm text-gray-600">Disponibles mercredi et samedi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-10 text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Wrapper horizontal avec séparation -->
+            <div class="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-8 text-center">
+                <!-- Coordonnées -->
+                <div class="space-y-2 md:text-right">
+                    <h4 class="text-lg font-semibold">Ferme des Amandiers</h4>
+                    <p class="text-sm">Chemin de la Plaine, 13220 Châteauneuf-les-Martigues</p>
+                    <p class="text-sm">Téléphone : 06 12 34 56 78</p>
+                    <p class="text-sm">Email : sandrine@fermedesamandiers.fr</p>
+                    <p class="text-sm">SIRET : 123 456 789 00012</p>
+                </div>
+
+                <!-- Barre verticale -->
+                <div class="hidden md:block h-20 w-px bg-gray-600 mx-4"></div>
+
+                <!-- Liens légaux -->
+                <div class="space-y-2 md:text-left mt-8 md:mt-0">
+                    <a href="#mentions-legales" class="block text-sm text-gray-300 hover:underline">Mentions légales</a>
+                    <a href="#politique-confidentialite" class="block text-sm text-gray-300 hover:underline">Politique de confidentialité</a>
+                    <a href="#cgv" class="block text-sm text-gray-300 hover:underline">Conditions générales de vente</a>
+                    <a href="#cookies" class="block text-sm text-gray-300 hover:underline">Gestion des cookies</a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-sm text-gray-400 text-center mt-8">
+                © 2025 Ferme des Amandiers – Tous droits réservés
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
